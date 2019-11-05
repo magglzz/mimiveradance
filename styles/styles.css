@@ -575,7 +575,6 @@ h6 {
   h1 {
   	font-size: 4rem;
     margin: 0;
-    color: var(--main-color);
   }
   #site-description {
     font-size: 1.4rem;
@@ -619,6 +618,9 @@ h6 {
 }
 @media screen and (max-width: 490px) {
 
+  #mc_embed_signup_scroll .email{
+  width: 50%;
+}
 	.body-content {
 	padding: 2em;
 	}
