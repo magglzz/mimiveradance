@@ -17,15 +17,15 @@
   font-weight: bold;
 }
 
-
 :root {
   --main-color: #FFA6AE;
   --dark-color: #FFA6AE;
   --sayhello-background: #202020;
   --text-color: #424242;
-  --background: #f2f2f2;
+  --background: #F7F3F3;
 }
-font-family: 'Cabin:, sans-serif;
+
+font-family: 'Dosis', sans-serif;
 
 .slide-out-top {
   -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -36,7 +36,7 @@ font-family: 'Cabin:, sans-serif;
           animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 body {
-  font-family: Cabin, helvetica neue, sans-serif;
+  font-family: Dosis, helvetica neue, sans-serif;
   font-weight: 200;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -125,7 +125,6 @@ ol {
 /********************************/
 nav {
   padding: 1.5em 2em;
-  background-color: black;
 }
 .navtitle {
   font-family: Riccione;
@@ -144,7 +143,6 @@ nav {
   text-decoration: none;
   padding: 1.2rem;
   font-size: 1rem;
-  color: white;
 }
 nav ul {
   display: flex;
@@ -274,7 +272,7 @@ nav ul {
 	}
   .space {
     background:transparent;
-    height: 72px;
+    height: 44px;
   }
   .spaceless{
     height: 24px;
@@ -298,6 +296,7 @@ nav ul {
 /********************************/
 .heroimg {
   width:100%;
+  padding-top: .8em;
 }
 img {
   width: 100%;
@@ -337,6 +336,8 @@ h6 {
   color: var(--background);
   position: relative;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 .contact-item a {
 	color: var(--background);
@@ -344,8 +345,6 @@ h6 {
 .contact-item-content {
   /* Force content above ::after element */
   z-index: 2;
-  padding: 1.6em;
-
 }
 .contact-item::after,
 .contact-item::before {
@@ -452,6 +451,7 @@ h6 {
 #mc_embed_signup  input {
   padding: 10px;
   margin-top: 24px;
+  font-family: Dosis;
 }
 #mc_embed_signup .button {
   background-color: var(--background);
@@ -459,11 +459,17 @@ h6 {
   border-color: var(--main-color);
   border-width: 2px;
   margin-top: 16px;
+  font-family: Dosis;
+  font-weight: 600;
+  font-size: .9em;
 }
 #mc_embed_signup .button:hover,
 #mc_embed_signup .button:focus {
   color: white;
   background-color: var(--main-color);
+}
+#mce-EMAIL {
+  width: 400px;
 }
 
 /********************************/
@@ -487,7 +493,7 @@ h6 {
   #sayhello .body-content {
   padding-top:4rem;
   }
-  .homephotos {
+/*  .homephotos {
     width: 100%;
   }
   .background-float {
@@ -496,31 +502,22 @@ h6 {
   }
   .thirdfloat {
     display: none;
-  }
+  }*/
   .head-img {
     width: 75%;
   }
-  .project-desc img {
-    width: 100%;
-    position: static;
-  }
-  .project-desc p {
-    width: 100%;
-    margin-bottom: 2em;
-  }
+
   .work-float {
     width: 40%;
     margin: 1em;
   }
-  .more-work {
-    padding: 1em;
-  }
+
   .background-float {
     margin: 2em;
   }
   .work-section {
     width: 100%;
-    padding: 3em 0;
+    padding-bottom: 1em;
   }
   .about-page .homephotos {
     width: 60%;
@@ -539,7 +536,10 @@ h6 {
   }
     .verticalbar {
     display: none;
-  }r
+  }
+    .workphotos {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 900px) {
 	.wrapper {
@@ -551,9 +551,6 @@ h6 {
 	.navigation li a {
 		font-size: 1.5em;
 	}
-	.project-page p {
-		font-size: 1.1rem;
-	}
 	ul {
 	font-size: 1.1rem;
 	}
@@ -563,8 +560,15 @@ h6 {
 	.body-content {
 		padding: 4rem;
 	}
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  h3{
+    font-size:1.2em;
+  }
 	h2 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	}
   .work-float {
     width: 90%;
@@ -575,10 +579,6 @@ h6 {
   }
   .arvideo {
     width: 65%;
-  }
-  h1 {
-  	font-size: 4rem;
-    margin: 0;
   }
   #site-description {
     font-size: 1.4rem;
@@ -599,6 +599,7 @@ h6 {
   #main-menu {
     display: none;
     position: fixed;
+    left: -20px;
     z-index: 1;
     height: 100vh;
     align-content: center;
@@ -612,25 +613,27 @@ h6 {
     text-align: center;
     padding-right: 5em;
   }
-  .project-page #main-menu {
-    background: var(--background-tint);
-  }
   #logo {
     float: right;
+  }
+  #mce-EMAIL {
+    width: 70%;
   }
 
 }
 @media screen and (max-width: 490px) {
-
   #mc_embed_signup_scroll .email{
-  width: 50%;
+  width: 80%;
 }
 	.body-content {
 	padding: 2em;
 	}
 	h1 {
-		font-size: 3em;
+		font-size: 2em;
 	}
+      .workphotos {
+    width: 80%;
+  }
 	#site-description {
 		font-size: 1.2em;
 		padding:0;
