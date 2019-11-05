@@ -1,0 +1,679 @@
+*{
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0px;
+
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .9s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+  -moz-transition-property: all;
+  -moz-transition-duration: .9s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+@font-face {
+  font-family: "Riccione";
+  src: url("fonts/Riccione-Bold.ttf");
+  font-weight: bold;
+}
+
+
+:root {
+  --main-color: #FFA6AE;
+  --dark-color: #FFA6AE;
+  --sayhello-background: #202020;
+  --text-color: #424242;
+  --background: #f2f2f2;
+}
+font-family: 'Cabin:, sans-serif;
+
+.slide-out-top {
+  -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+body {
+  font-family: Cabin, helvetica neue, sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--background);
+  width: 100%;
+  position: relative;
+  left: 0;
+/*   transition: left 0.2s; */
+}
+.footer {
+	color: var(--background);
+	padding-top: 1em;
+  font-size: .7em;
+}
+.em {
+  height: 1em;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+a:hover,
+a:focus {
+  color: var(--main-color);
+}
+h1 {
+  font-family: Riccione;
+  font-size: 3rem; 
+  color: var(--sayhello-background);
+  line-height: 1.2em;
+  margin: 0;
+}
+h2 {
+  font-family: Riccione;
+  font-size: 2.3rem;
+  padding-top: 1em;
+  margin: 0;
+}
+h3 {
+  font-family: Riccione;
+  font-size: 1.8rem;
+  margin-bottom: .1em;
+}
+hr {
+  color: var(--main-color);
+  margin: 3em 0 1em 0;
+  height: 1px;
+}
+p {
+  padding: 0;
+}
+.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+ul {
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+ol {
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+.overflow {
+  overflow: auto;
+}
+.grid-cell {
+  margin-left: 12.5%;
+  -webkit-flex-basis: 75%;
+  margin-top: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  flex: 0 0 100%;
+  position: relative;
+}
+
+/********************************/
+/****** top nav styling *********/
+/********************************/
+nav {
+  padding: 1.5em 2em;
+  background-color: black;
+}
+.navtitle {
+  font-family: Riccione;
+  color: var(--main-color);
+  font-size: 1.2em;
+}
+.navigation{
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+}
+.navigation li {
+  display: inline-block;
+}
+.navigation li a {
+  text-decoration: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0;
+}
+#logo {
+  width: 40px;
+}
+ 
+/********************************/
+/****** button styling *********/
+/********************************/
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--main-color);
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 1em;
+  background-color: var(--background);
+}
+.btn.btndark {
+  margin-left: 30px;
+  background-color: transparent;
+}
+.btn svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.btn svg rect {
+  fill: none;
+  stroke: var(--main-color);
+  stroke-width: 4;
+  stroke-dasharray: 422, 0;
+  
+  @include transition(all 1300ms $ease-out-expo);
+}
+.btn:hover {
+  background-color: transparent;
+
+}
+.btn:hover svg rect {
+  stroke-width: 7;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn:hover {
+  color: var(--main-color);
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.btndark:hover {
+  background-color: transparent;
+}
+#menu-btn {
+  position: absolute;
+  /* Place menu button above menu ul */
+  z-index: 2;
+  height: 30px;
+  width: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+#menu-btn span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#menu-btn span,
+#menu-btn span:before,
+#menu-btn span:after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 3px;
+  border-radius: 3px;
+  width: 100%;
+  background: var(--text-color);
+  transition: all 200ms ease-in-out;
+}
+#menu-btn span:before {
+  top: -10px;
+}
+#menu-btn span:after {
+  bottom: -10px;
+}
+#menu-btn.active span {
+  background-color: transparent;
+}
+#menu-btn.active span:before {
+  transform: translate3d(0,10px,0) rotate(45deg)
+}
+#menu-btn.active span:after {
+  transform: translate3d(0,-10px,0) rotate(-45deg)
+}
+
+.clear input{
+  border-width: 2px;
+  border-color: var(--main-color);
+  font-family: cabin;
+  font-size: 1rem;
+}
+#mc_embed_signup_scroll .email{
+  font-family: cabin;
+  width: 400px;
+}
+
+.articles {
+  text-decoration: underline;
+  font-weight: 500;
+}
+/********************************/
+/****** page containers *********/
+/********************************/
+
+.body-content {
+	padding: 4rem 6rem 3rem 6rem;
+	}
+
+.container {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	}
+  .space {
+    background:transparent;
+    height: 72px;
+  }
+  .spaceless{
+    height: 24px;
+  }
+/********************************/
+/****** homepage header styling *********/
+/********************************/
+
+
+/********************************/
+/****** layout *********/
+/********************************/
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+.section-content {
+  width: 45%;
+  text-align: left;
+}
+/********************************/
+/****** images *********/
+/********************************/
+.heroimg {
+  width:100%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/********************************/
+/****** say hello *********/
+/********************************/
+
+#sayhello {
+  background-color: var(--sayhello-background);
+  margin-top: 2em;
+}
+.hello-subtitle {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: .8rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#sayhello-content h3{
+  border-bottom: 1px solid var(--accent-color); 
+  margin-right: 50px; 
+}
+h6 {
+  color: var(--background);
+  font-size: 1.05rem;
+  margin: 0;
+  text-decoration: none;
+}
+.contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  color: var(--background);
+  position: relative;
+  cursor: pointer;
+}
+.contact-item a {
+	color: var(--background);
+}
+.contact-item-content {
+  /* Force content above ::after element */
+  z-index: 2;
+  padding: 1.6em;
+
+}
+.contact-item::after,
+.contact-item::before {
+  border: 2px solid var(--main-color);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-item::before {
+  /* Set content of box to empty */
+  content: " ";
+  /* Position box absolute in relation to relative parent */
+  position: absolute;
+  /* Offset box by 5px */
+  left: 10px;
+  top: 10px;
+
+  /* Set the background */
+  background-image: linear-gradient(0deg, var(--main-color) 0%, var(--main-color) 100%);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+
+  /* Set animation/transition when background-size changes */
+  transition: background-size 500ms -200ms;
+}
+
+.contact-item:focus::before,
+.contact-item:hover::before {
+  background-size: 100% 100%;
+}
+
+.contact-item::after {
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: background 600ms;
+  background-color: var(--sayhello-background);
+}
+
+.contact-contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+#sayhello-content {
+  color: var(--background);
+}
+#linkedin {
+  height: 132px;
+  width: 170px;
+}
+#dribbble {
+  height: 160px;
+  width: 170px;
+}
+#behance {
+  height: 202px;
+  width: 170px;
+}
+#email {
+  height: 132px;
+  width: 170px;
+}
+/********************************/
+/****** About me *********/
+/********************************/
+.about-page .two-column {
+  width: 100%;
+  padding: 2em 0;
+}
+.about-page .contact-wrapper {
+  display: flex;
+}
+.about-page .contact-contents {
+  margin: 0;
+  width: 47%;
+}
+.about-page .contact-item::after {
+  background-color: var(--background);
+}
+.about-page h6 {
+  color: var(--text-color);
+}
+.about-page .section-content p {
+  padding: 0;
+}
+/********************************/
+/****** Work page *********/
+/********************************/
+.workphotos {
+  width: 100%;
+}
+.work-section {
+  width:45%;
+}
+.work-page .two-column {
+  width: 100%;
+}
+/********************************/
+/****** responsive *********/
+/********************************/
+
+@media screen and (max-width: 960px) {
+  .section-content {
+    width: 100%;
+  }
+  .wrapper {
+    width: 80%;
+    padding: 2em 0 0 5em;
+  }
+  .work-page .two-column {
+    padding: 0;
+  }
+  #sayhello .two-column {
+    padding: 0;
+  }
+  #sayhello .body-content {
+  padding-top:4rem;
+  }
+  .homephotos {
+    width: 100%;
+  }
+  .background-float {
+    width: 60%;
+    margin-top: 100px;
+  }
+  .thirdfloat {
+    display: none;
+  }
+  .head-img {
+    width: 75%;
+  }
+  .project-desc img {
+    width: 100%;
+    position: static;
+  }
+  .project-desc p {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .work-float {
+    width: 40%;
+    margin: 1em;
+  }
+  .more-work {
+    padding: 1em;
+  }
+  .background-float {
+    margin: 2em;
+  }
+  .work-section {
+    width: 100%;
+    padding: 3em 0;
+  }
+  .about-page .homephotos {
+    width: 60%;
+  }
+  .background-page #sayhello {
+    padding: 3em 7em;
+  }
+  .background-page #sayhello-content {
+    width: 100%;
+  }
+  .background-page .contact-contents {
+    margin: 0;
+  }
+  .about-page .contact-contents {
+    width: 80%;
+  }
+    .verticalbar {
+    display: none;
+  }r
+}
+@media screen and (max-width: 900px) {
+	.wrapper {
+    padding: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 660px) {
+	.navigation li a {
+		font-size: 1.5em;
+	}
+	.project-page p {
+		font-size: 1.1rem;
+	}
+	ul {
+	font-size: 1.1rem;
+	}
+	ol {
+	font-size: 1.1rem;
+	}
+	.body-content {
+		padding: 4rem;
+	}
+	h2 {
+	font-size: 1.5em;
+	}
+  .work-float {
+    width: 90%;
+    margin: 1em;
+  }
+  .section-content {
+    width: 100%;
+  }
+  .arvideo {
+    width: 65%;
+  }
+  h1 {
+  	font-size: 4rem;
+    margin: 0;
+    color: var(--main-color);
+  }
+  #site-description {
+    font-size: 1.4rem;
+  }
+  #logo {
+    /*margin: 10px;*/
+    /* Push logo above menu ul */
+    position: relative;
+    z-index: 2;
+  }
+  .background-float {
+    width: 80%;
+  }
+  nav {
+    height: 60px;
+    width: 100%;
+  }
+  #main-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    align-content: center;
+    background: var(--background);
+    margin: 0;
+    padding-top: 100px;
+  }
+  #main-menu li {
+    width: 100%;
+    padding: 45px;
+    text-align: center;
+    padding-right: 5em;
+  }
+  .project-page #main-menu {
+    background: var(--background-tint);
+  }
+  #logo {
+    float: right;
+  }
+
+}
+@media screen and (max-width: 490px) {
+
+	.body-content {
+	padding: 2em;
+	}
+	h1 {
+		font-size: 3em;
+	}
+	#site-description {
+		font-size: 1.2em;
+		padding:0;
+	}
+  .section-content {
+    width: 100%;
+  }
+    #linkedin {
+  	height: 132px;
+  	width: 100px;
+	}
+	#dribbble {
+ 	 height: 160px;
+ 	 width: 100px;
+	}
+	#behance {
+ 	 height: 181px;
+ 	 width: 100px;
+	}
+	#email {
+  	height: 132px;
+  	width: 100px;
+	}
+	.contact-item {
+		margin: 1em;
+		}
+  .background-float {
+    width: 100%;
+    margin: 0;
+  }
+  .arvideo {
+    width: 85%;
+  }
+  .homephotos {
+    width: 100%;
+  }
+  .background-page .work-section {
+    padding: 2em;
+  }
+  .background-page #sayhello {
+    padding: 2em;
+  }
+  .plus {
+    height: 7px;
+    width: 7px;
+  }
+}
+@media screen and (min-width: 660px) {
+  #menu-btn {
+    display: none;
+  }
+}
