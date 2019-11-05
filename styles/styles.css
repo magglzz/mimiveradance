@@ -291,9 +291,24 @@ nav ul {
     height: 24px;
   }
 /********************************/
-/****** homepage header styling *********/
+/****** Subscribe *********/
 /********************************/
-
+#mc_embed_signup  input {
+  padding: 10px;
+  margin-top: 24px;
+}
+#mc_embed_signup .button {
+  background-color: var(--background);
+  color: var(--main-color);
+  border-color: var(--main-color);
+  border-width: 2px;
+  margin-top: 16px;
+}
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:focus {
+  color: white;
+  background-color: var(--main-color);
+}
 
 /********************************/
 /****** layout *********/
