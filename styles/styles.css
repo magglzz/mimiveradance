@@ -255,17 +255,6 @@ nav ul {
   transform: translate3d(0,-10px,0) rotate(-45deg)
 }
 
-.clear input{
-  border-width: 2px;
-  border-color: var(--main-color);
-  font-family: cabin;
-  font-size: 1rem;
-}
-#mc_embed_signup_scroll .email{
-  font-family: cabin;
-  width: 400px;
-}
-
 .articles {
   text-decoration: underline;
   font-weight: 500;
