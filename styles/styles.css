@@ -25,6 +25,16 @@
   --background: #F7F3F3;
 }
 
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/AvenirMedium.ttf");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir.otf");
+  font-weight: normal;
+}
 font-family: 'Dosis', sans-serif;
 
 .slide-out-top {
@@ -36,8 +46,8 @@ font-family: 'Dosis', sans-serif;
           animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 body {
-  font-family: Dosis, helvetica neue, sans-serif;
-  font-weight: 200;
+  font-family: Avenir, helvetica neue, sans-serif;
+  font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.6rem;
   color: var(--text-color);
@@ -296,7 +306,6 @@ nav ul {
 /********************************/
 .heroimg {
   width:100%;
-  padding-top: .8em;
 }
 img {
   width: 100%;
