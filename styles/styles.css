@@ -22,7 +22,7 @@
   --dark-color: #FFA6AE;
   --sayhello-background: #202020;
   --text-color: #424242;
-  --background: #F7F3F3;
+  --background: #FFFFFF;
 }
 
 @font-face {
@@ -35,8 +35,6 @@
   src: url("fonts/Avenir.otf");
   font-weight: normal;
 }
-font-family: 'Dosis', sans-serif;
-
 .slide-out-top {
   -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
           animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -460,7 +458,7 @@ h6 {
 #mc_embed_signup  input {
   padding: 10px;
   margin-top: 24px;
-  font-family: Dosis;
+  font-family: Avenir;
 }
 #mc_embed_signup .button {
   background-color: var(--background);
@@ -468,7 +466,7 @@ h6 {
   border-color: var(--main-color);
   border-width: 2px;
   margin-top: 16px;
-  font-family: Dosis;
+  font-family: Avenir;
   font-weight: 600;
   font-size: .9em;
 }
